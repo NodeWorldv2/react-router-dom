@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter,Route, Link, Switch} from 'react-router-dom'
+
+import Tescomponent from './components/testcomponent'
+import Navbar from './components/navbar'
+import Profile from './components/profile'
+import About from './components/about'
+import Contact from './components/contact'
+import Home from './components/home'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <hr/>
+
+        {/* <Route path="/" component = {Home}/>
+        <Route path="/profile" component = {Profile}/>
+        <Route path="/about" component = {About}/>
+        <Route path="/contact" component = {Contact}/> */}
+        <Route path="/rendering" render={()=>{
+          return <h1>This is just rendering rout</h1>
+          }}/>
+        
+        <Route path="/" exact render = {()=>{
+          return <Home name = "Adil from Home"/>
+        }}/>
+        <Route path="/profile" component = {Profile}/>
+        <Route path="/about" component = {About}/>
+        <Route path="/contact" component = {Contact}/>
+
+      
+      </div>
+    </BrowserRouter>
   );
 }
 
