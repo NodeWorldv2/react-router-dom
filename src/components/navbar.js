@@ -14,12 +14,13 @@ class navbar extends Component {
                         <li className="active"><Link to="/">Home</Link></li>
                         <li><Link to='/about'>about</Link></li>
                         <li><Link to='/profile'>profile</Link></li>
-                        <li><Link to='/contact'>contact</Link></li>
+                        <li><Link to='/token_based_axios'>token_based_axios</Link></li>
+                        <li><Link to='/axios_auth'>axios_auth</Link></li>
                         
                         </ul>
                     </div>
                 </nav>
-                <button className="btn btn-primary">bootstrap4</button>
+              
             </div>
         );
     }
