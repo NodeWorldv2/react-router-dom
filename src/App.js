@@ -11,6 +11,7 @@ import Home from './components/home'
 import Loading_test from './components/Loading_test'
 import Axios_auth from './components/axios_auth'
 import Token_based_axios from './components/token_based_axios'
+import Localstorage from './components/localstorage'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           return <Home name = "Adil from Home"/>
         }}/>
         <Route path="/profile" component = {Profile}/>
+        <Route path="/localstorage" component = {Localstorage}/>
         <Route path="/about" component = {About}/>
         <Route path="/token_based_axios" component = {Token_based_axios}/>
         <Route path="/axios_auth" component = {Axios_auth}/>
