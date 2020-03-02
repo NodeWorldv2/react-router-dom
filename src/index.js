@@ -7,6 +7,20 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux'
 import store from './store'
 
+import * as Types from './store/actions/types'
+
+const token = localStorage.getItem('dyanamci_token');
+if(token)
+{
+    store.dispatch({
+        type: Types.SET_USER,
+        
+        payload:{
+            user: {"username":"adilreza", "token":token}
+        }
+    })
+}
+
 ReactDOM.render(
     <Provider store = {store}>
         <App />

@@ -1,11 +1,12 @@
 import React, { Component } from "react"
+import {login} from '../store/actions/authActions'
+import {connect} from 'react-redux'
 
 class Login extends Component{
 
     state = {
-        username: '',
-        password: '',
-        error :{},
+        username:'',
+        password:'',
         user :{}
     }
 
@@ -20,6 +21,8 @@ class Login extends Component{
 
     submitHandler = event =>{
         event.preventDefault();
+        let {username, password} = this.state
+        this.props.login({username, password},this.props.history)
        
     }
 
@@ -51,7 +54,7 @@ class Login extends Component{
                                     />
                             </div>
                           
-                            <button type="submit" className="btn btn-primary">=login Now</button>
+                            <button type="submit" className="btn btn-primary">login Now</button>
                     </form>
                     <hr>
                     </hr>
@@ -62,4 +65,4 @@ class Login extends Component{
     }
 }
 
-export default Login
+export default connect(null,{login})(Login)

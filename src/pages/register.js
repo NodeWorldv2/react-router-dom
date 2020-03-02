@@ -58,9 +58,9 @@ class Register extends Component{
                                     value = {username}
                                     onChange = {this.changeHandler}
                                     />
-                                <div className="invalid-feedback">
-                                    {error.username}
-                                </div>
+                                {error.username && (
+                                    <div className="invalid-feedback">{error.username}</div>
+                                )}
                             </div>
 
                             <div className="form-group">
@@ -73,9 +73,9 @@ class Register extends Component{
                                     value = {email}
                                     onChange = {this.changeHandler}
                                     />
-                                <div className="invalid-feedback">
-                                    {error.email}
-                                </div>
+                                 {error.email && (
+                                    <div className="invalid-feedback">{error.email}</div>
+                                )}
                             </div>
 
                             <div className="form-group">
@@ -89,9 +89,9 @@ class Register extends Component{
                                     onChange = {this.changeHandler}
                                  />
 
-                                <div className="invalid-feedback">
-                                    {error.password1}
-                                </div>
+                                 {error.password1 && (
+                                    <div className="invalid-feedback">{error.password1}</div>
+                                )}
                             </div>
 
                             <div className="form-group">
@@ -104,9 +104,9 @@ class Register extends Component{
                                     value = {password2}
                                     onChange = {this.changeHandler}
                                     />
-                                <div className="invalid-feedback">
-                                    {error.password2}
-                                </div>
+                                {error.password2 && (
+                                    <div className="invalid-feedback">{error.password2}</div>
+                                )}
                             </div>
 
                             {error.non_field_errors? error.non_field_errors: ""}
