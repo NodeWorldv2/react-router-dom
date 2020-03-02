@@ -12,6 +12,8 @@ import Loading_test from './components/Loading_test'
 import Axios_auth from './components/axios_auth'
 import Token_based_axios from './components/token_based_axios'
 import Localstorage from './components/localstorage'
+import Login from './pages/login'
+import Register from './pages/register'
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
         <Route path="/about" component = {About}/>
         <Route path="/token_based_axios" component = {Token_based_axios}/>
         <Route path="/axios_auth" component = {Axios_auth}/>
+        <Route path="/login" component = {Login}/>
+        <Route path="/register" component = {Register}/>
 
       
       </div>
