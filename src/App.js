@@ -14,6 +14,7 @@ import Token_based_axios from './components/token_based_axios'
 import Localstorage from './components/localstorage'
 import Login from './pages/login'
 import Register from './pages/register'
+import contact from './components/contact';
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
         <Route path="/axios_auth" component = {Axios_auth}/>
         <Route path="/login" component = {Login}/>
         <Route path="/register" component = {Register}/>
+        <Route path="/contact" component = {contact}/>
+        <Route path="/test" component = {Tescomponent}/>
+
 
       
       </div>

@@ -2,7 +2,7 @@ import Axios from 'axios'
 import * as Types from './types'
 
 export const register = (user_info, history) => dispatch =>{
-    Axios.post('http://127.0.0.1:8000/api/rest-auth/registration', user_info)
+    Axios.post('http://52.221.186.244/api/rest-auth/registration', user_info)
     .then(resp=>{
        
         console.log(resp)
@@ -22,7 +22,7 @@ export const register = (user_info, history) => dispatch =>{
 }
 
 export const login = (userinfo, history)=>dispatch =>{
-    Axios.post('http://127.0.0.1:8000/api/rest-auth/login/', userinfo)
+    Axios.post('http://52.221.186.244/api/rest-auth/login/', userinfo)
     .then(resp=>{
        
         let token = resp.data.key;
@@ -41,7 +41,12 @@ export const login = (userinfo, history)=>dispatch =>{
         history.push("/about")
     })
     .catch(error=>{
-        console.log(error)
+        dispatch({
+            type: Types.USERS_ERROR,
+            payload: {
+                error: error.response.data
+            }
+        })
     })
 
 }
