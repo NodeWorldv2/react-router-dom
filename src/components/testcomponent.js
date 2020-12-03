@@ -3,7 +3,6 @@ import Axios from 'axios'
 
 class testcomponent extends Component{
 
-
     submitHandeler=(event)=>{
         let data1 = "adil"
         let data2 = "adil2 style"
@@ -15,7 +14,6 @@ class testcomponent extends Component{
             console.log(error)
         })
     }
-
 
     render(){
         return(

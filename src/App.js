@@ -15,6 +15,10 @@ import Localstorage from './components/localstorage'
 import Login from './pages/login'
 import Register from './pages/register'
 import contact from './components/contact';
+import Chart from './components/chart'
+import ChartPie from './components/chartpie'
+import Doughnut from './components/doughnut'
+
 
 function App() {
   return (
@@ -22,7 +26,7 @@ function App() {
       <div className="App">
         <Navbar />
         <hr/>
-        <Loading_test/>
+        {/* <Loading_test/> */}
         <hr/>
         <hr/>
 
@@ -48,6 +52,9 @@ function App() {
         <Route path="/register" component = {Register}/>
         <Route path="/contact" component = {contact}/>
         <Route path="/test" component = {Tescomponent}/>
+        <Route path="/chart" component = {Chart}/>
+        <Route path="/chart-pie" component = {ChartPie}/>
+        <Route path="/chart-daughnut" component = {Doughnut}/>
 
 
       
