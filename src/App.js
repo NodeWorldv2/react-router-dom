@@ -18,6 +18,7 @@ import contact from './components/contact';
 import Chart from './components/chart'
 import ChartPie from './components/chartpie'
 import Doughnut from './components/doughnut'
+import LineGraph from './components/linegraph'
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Route path="/chart" component = {Chart}/>
         <Route path="/chart-pie" component = {ChartPie}/>
         <Route path="/chart-daughnut" component = {Doughnut}/>
+        <Route path="/chart-line" component = {LineGraph}/>
 
 
       

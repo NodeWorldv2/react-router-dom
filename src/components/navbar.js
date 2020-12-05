@@ -20,6 +20,7 @@ class navbar extends Component {
                             <li><Link to='/chart'>Chart-bar</Link></li>
                             <li><Link to='/chart-pie'>Chart-pie</Link></li>
                             <li><Link to='/chart-daughnut'>daughnut</Link></li>
+                            <li><Link to='/chart-line'>LineGraph</Link></li>
                         
                         </ul>
                     </div>
